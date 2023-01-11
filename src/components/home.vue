@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 </script>
 
 <style>
@@ -16,7 +15,8 @@
     margin: 50px;
 }
 .monk-cat-quotes__image {
-    height: 460px;
+    height: 390px;
+    width: 400px;
     margin: auto;
 }
 

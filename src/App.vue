@@ -1,6 +1,7 @@
 <template>
     <p class="monk-cat-quotes_title">Gato Sábio App</p>
     <home />
+    <quotePicker />
 
 </template>
 
@@ -17,14 +18,19 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=EB+Garamond:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Carter+One&display=swap');
+
+
+body {
+  background-color: #b5d6f3;
+}
 
 .monk-cat-quotes_title {
   font-size: 35px;
   text-align: center;
   font-family: 'Acme', 'EB Garamond', serif;
   font-weight: 800;
-  padding: 25px;
-  border-bottom: 2px solid #e4e1e7;
+  padding:5px;
+  border-bottom: 1px solid #b2a5be;
   }
 </style>
