@@ -1,36 +1,23 @@
 <template>
-    <p class="monk-cat-quotes_title">Gato Sábio App</p>
-    <home />
-    <quotePicker />
-
+    <Home />
 </template>
 
-<script>
-import home from './components/home.vue';
-import quotePicker from './components/quotePicker.vue';
-
-export default {  
-  components: {
-    home,
-    quotePicker
-  },
-}
+<script setup>
+import Home from './components/Home.vue';
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Teko:wght@700&family=Vollkorn:ital,wght@0,600;1,700&display=swap');
 
-
-body {
-  background-color: #b5d6f3;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.monk-cat-quotes_title {
-  font-size: 35px;
-  text-align: center;
-  font-family: 'Acme', 'EB Garamond', serif;
-  font-weight: 800;
-  padding:5px;
-  border-bottom: 1px solid #b2a5be;
-  }
+body {
+  background: #0d506e;
+  height: 732px;
+}
+
 </style>
