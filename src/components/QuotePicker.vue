@@ -3,13 +3,39 @@
     <div class="quote-picker">
         <p class="quote-picker__quote">
             <span class="quote-picker__quotation-mark">&#8220;</span>
-            <span>Uma cerveja antes do almoço é muito bom pra ficar pensando melhor.
+            <span>{{ quote.quote }}
                 <span class="quote-picker__quotation-mark">&#8221;</span>
             </span>
         </p>
-        <div class="quote-picker__author">- Chico Science</div>
+        <div class="quote-picker__author">- {{  quote.author  }}</div>
     </div>
 </template>
+
+<script setup>
+    import { ref, onBeforeMount } from 'vue';
+
+    const quote = ref({
+        author: '',
+        quote: ''
+    });
+    
+    const randomQuote = items => items[Math.floor(Math.random()*items.length)];
+
+    function fetchQuotes() {
+        fetch('/api/quotes')
+        .then(res => { 
+            res.json().then(json => {
+                const random = randomQuote(json)
+                quote.value = {
+                    author: random.author,
+                    quote: randomQuote(random.quotes)
+                }
+            })
+        })
+    };
+
+    onBeforeMount(fetchQuotes);
+</script>
 
 <style>
 .quote-picker {
@@ -29,6 +55,7 @@
     margin: 0 auto;
     padding: 12px 8px;
     border-radius: 10px;
+    justify-content: center;
 }
 
 .quote-picker__quote span:nth-child(2) {

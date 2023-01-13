@@ -7,11 +7,14 @@
         </div>
         <QuotePicker />
     </main>
+    <footer>
+        <span ></span>
+    </footer>
 </template>
 
 <script setup>
 import QuotePicker from "@/components/QuotePicker.vue";
-import monkCatImage from "@/assets/images/rdrama-marsey.gif";
+import monkCatImage from "@/assets/images/monk_cat.png";
 </script>
 
 <style>
@@ -57,8 +60,14 @@ import monkCatImage from "@/assets/images/rdrama-marsey.gif";
 .monk-cat-quotes__image {
     position: absolute;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     margin: auto;
+    animation: mover 2.5s infinite  alternate;
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
 }
 
 </style>
