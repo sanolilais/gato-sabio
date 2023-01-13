@@ -7,9 +7,6 @@
         </div>
         <QuotePicker />
     </main>
-    <footer>
-        <span ></span>
-    </footer>
 </template>
 
 <script setup>
